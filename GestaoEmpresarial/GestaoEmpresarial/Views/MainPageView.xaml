@@ -50,7 +50,7 @@
                     RowDefinitions=".4*, .3*, .3*">
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer
-                            Tapped="crdControleCaixa_Tapped"/>
+                            Command="{Binding ControleCaixaTappedCommand}"/>
                     </Grid.GestureRecognizers>
                     <Image
                         Grid.Row="0"
@@ -90,7 +90,7 @@
                     RowDefinitions=".4*, .3*, .3*">
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer
-                            Tapped="crdEstatisticas_Tapped"/>
+                            Command="{Binding EstatisticasTappedCommand}"/>
                     </Grid.GestureRecognizers>
                     <Image
                         Grid.Row="0"
@@ -130,7 +130,7 @@
                     RowDefinitions=".4*, .3*, .3*">
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer
-                            Tapped="crdAnotacoes_Tapped"/>
+                            Command="{Binding AnotacoesTappedCommand}"/>
                     </Grid.GestureRecognizers>
                     <Image
                         Grid.Row="0"
