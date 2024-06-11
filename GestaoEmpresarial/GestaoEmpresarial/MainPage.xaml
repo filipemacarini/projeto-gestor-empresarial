@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GestaoEmpresarial.MainPage"
+    Shell.NavBarIsVisible="False">
+
+    <Grid
+        Padding="20"
+        RowDefinitions="48, *">
+        <Grid
+            Grid.Row="0"
+            ColumnDefinitions="48, *"
+            ColumnSpacing="10">
+            <Border
+                Grid.Column="0"
+                Stroke="{StaticResource Gray100}"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 90, 90, 90, 90">
+                <Image Source="logo.png" Aspect="Fill"/>
+            </Border>
+            <VerticalStackLayout
+                Grid.Column="1"
+                VerticalOptions="Center">
+                <Label
+                    Text="Filipe Emanuel Macarini Roco"
+                    FontSize="15"
+                    FontFamily="SpaceB"
+                    TextColor="{StaticResource Gray100}"/>
+                <Label
+                    Text="DEV FILIPE"
+                    FontSize="12"
+                    FontFamily="SpaceM"
+                    TextColor="{StaticResource Gray200}"/>
+            </VerticalStackLayout>
+        </Grid>
+        <Grid
+            Grid.Row="1"
+            ColumnDefinitions="*, *, *"
+            ColumnSpacing="20"
+            HeightRequest="200"
+            VerticalOptions="Center">
+            <Border
+                Grid.Column="0"
+                Stroke="{StaticResource Gray100}"
+                StrokeShape="RoundRectangle 30, 30, 30, 30"
+                BackgroundColor="{StaticResource Gray800}">
+                <Grid
+                    Padding="20"
+                    RowDefinitions=".4*, .3*, .3*">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="crdControleCaixa_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Image
+                        Grid.Row="0"
+                        VerticalOptions="Start">
+                        <Image.Source>
+                            <FontImageSource
+                                Glyph="&#xE807;"
+                                FontFamily="Icons"
+                                Size="100"/>
+                        </Image.Source>
+                    </Image>
+                    <Label
+                        Grid.Row="1"
+                        FontFamily="SpaceB"
+                        Text="Controle de Caixa"
+                        FontSize="30"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Label
+                        Grid.Row="2"
+                        FontFamily="RobotoR"
+                        Text="Entrada e saída de dinheiro em pix, cartão e dinheiro."
+                        FontSize="16"
+                        VerticalOptions="End"
+                        HorizontalTextAlignment="Center"
+                        TextColor="{StaticResource Gray100}"/>
+                </Grid>
+            </Border>
+            <Border
+                Grid.Column="1"
+                Stroke="{StaticResource Gray100}"
+                StrokeShape="RoundRectangle 30, 30, 30, 30"
+                BackgroundColor="{StaticResource Gray800}">
+                <Grid
+                    Padding="20"
+                    RowDefinitions=".4*, .3*, .3*">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="crdEstatisticas_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Image
+                        Grid.Row="0"
+                        VerticalOptions="Start">
+                        <Image.Source>
+                            <FontImageSource
+                                Glyph="&#xE808;"
+                                FontFamily="Icons"
+                                Size="100"/>
+                        </Image.Source>
+                    </Image>
+                    <Label
+                        Grid.Row="1"
+                        FontFamily="SpaceB"
+                        Text="Estatísticas"
+                        FontSize="30"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Label
+                        Grid.Row="2"
+                        FontFamily="RobotoR"
+                        Text="Estatísticas de movimentação do dinheiro relacionado a um período."
+                        FontSize="16"
+                        VerticalOptions="End"
+                        HorizontalTextAlignment="Center"
+                        TextColor="{StaticResource Gray100}"/>
+                </Grid>
+            </Border>
+            <Border
+                Grid.Column="2"
+                Stroke="{StaticResource Gray100}"
+                StrokeShape="RoundRectangle 30, 30, 30, 30"
+                BackgroundColor="{StaticResource Gray800}">
+                <Grid
+                    Padding="20"
+                    RowDefinitions=".4*, .3*, .3*">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="crdAnotacoes_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Image
+                        Grid.Row="0"
+                        VerticalOptions="Start">
+                        <Image.Source>
+                            <FontImageSource
+                                Glyph="&#xE806;"
+                                FontFamily="Icons"
+                                Size="100"/>
+                        </Image.Source>
+                    </Image>
+                    <Label
+                        Grid.Row="1"
+                        FontFamily="SpaceB"
+                        Text="Anotações"
+                        FontSize="30"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Label
+                        Grid.Row="2"
+                        FontFamily="RobotoR"
+                        Text="Anotações inteligentes e relacionados"
+                        FontSize="16"
+                        VerticalOptions="End"
+                        HorizontalTextAlignment="Center"
+                        TextColor="{StaticResource Gray100}"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+
+</ContentPage>
