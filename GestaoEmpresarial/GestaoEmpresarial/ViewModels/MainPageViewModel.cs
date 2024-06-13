@@ -1,4 +1,5 @@
-﻿using GestaoEmpresarial.Views;
+﻿using GestaoEmpresarial.Models;
+using GestaoEmpresarial.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +11,24 @@ namespace GestaoEmpresarial.ViewModels
 {
 	public class MainPageViewModel
 	{
-		public ICommand ControleCaixaTappedCommand =>
-			new Command(async () =>
+		public ICommand ControleCaixaTappedCommand { get; set; }
+		public ICommand EstatisticasTappedCommand { get; set; }
+		public ICommand AnotacoesTappedCommand { get; set; }
+
+		public UserModel Usuario { get; set; }
+
+        public MainPageViewModel()
+		{
+			ControleCaixaTappedCommand = new Command(async () =>
 				await Application.Current.MainPage.Navigation.PushAsync(new ControleCaixaView()));
 
-		public ICommand EstatisticasTappedCommand =>
-			new Command(async () =>
+			EstatisticasTappedCommand =	new Command(async () =>
 				await Application.Current.MainPage.Navigation.PushAsync(new EstatisticasView()));
 
-		public ICommand AnotacoesTappedCommand =>
-			new Command(async () =>
+			AnotacoesTappedCommand = new Command(async () =>
 				await Application.Current.MainPage.Navigation.PushAsync(new AnotacoesView()));
+
+			Usuario = new UserModel("Filipe Emanuel Macarini Roco", "DEV FILIPE", "1234", "logo.png");
+		}
 	}
 }

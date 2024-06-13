@@ -23,12 +23,12 @@
                 Grid.Column="1"
                 VerticalOptions="Center">
                 <Label
-                    Text="Filipe Emanuel Macarini Roco"
+                    Text="{Binding Usuario.Name}"
                     FontSize="15"
                     FontFamily="SpaceB"
                     TextColor="{StaticResource Gray100}"/>
                 <Label
-                    Text="DEV FILIPE"
+                    Text="{Binding Usuario.EnterpriseName}"
                     FontSize="12"
                     FontFamily="SpaceM"
                     TextColor="{StaticResource Gray200}"/>
@@ -153,7 +153,7 @@
                     <Label
                         Grid.Row="2"
                         FontFamily="RobotoR"
-                        Text="Anotações inteligentes e relacionados"
+                        Text="Anotações inteligentes e relacionados."
                         FontSize="16"
                         VerticalOptions="End"
                         HorizontalTextAlignment="Center"

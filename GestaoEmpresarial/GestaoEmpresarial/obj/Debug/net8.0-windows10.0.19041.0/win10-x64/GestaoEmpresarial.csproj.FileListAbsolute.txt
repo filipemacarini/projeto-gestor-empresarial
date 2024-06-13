@@ -182,3 +182,4 @@ C:\Users\manau\OneDrive\Documentos\Projetos\Meus Repositórios Github\projeto-ge
 C:\Users\manau\OneDrive\Documentos\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\SpaceMono-Regular.ttf
 C:\Users\manau\OneDrive\Documentos\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo.scale-100.png
 C:\Users\manau\OneDrive\Documentos\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\icons.ttf
+C:\Users\manau\OneDrive\Documentos\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\GestaoEmpresarial.sourcelink.json
