@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using GestaoEmpresarial.Services;
 
 namespace GestaoEmpresarial
 {
@@ -27,6 +28,7 @@ namespace GestaoEmpresarial
 #if DEBUG
 			builder.Logging.AddDebug();
 #endif
+			builder.Services.AddSingleton<ICaixaService, CaixaService>();
 
 			return builder.Build();
 		}

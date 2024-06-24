@@ -1,12 +1,14 @@
-﻿namespace GestaoEmpresarial
+﻿using GestaoEmpresarial.Services;
+
+namespace GestaoEmpresarial
 {
 	public partial class App : Application
 	{
-		public App()
+		public App(ICaixaService caixaService)
 		{
 			InitializeComponent();
 
-			MainPage = new AppShell();
+			MainPage = new NavigationPage(new MainPage(caixaService));
 		}
 	}
 }

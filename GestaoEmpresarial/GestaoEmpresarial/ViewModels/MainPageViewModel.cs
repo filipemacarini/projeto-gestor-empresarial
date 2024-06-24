@@ -1,4 +1,5 @@
 ﻿using GestaoEmpresarial.Models;
+using GestaoEmpresarial.Services;
 using GestaoEmpresarial.Views;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,10 @@ namespace GestaoEmpresarial.ViewModels
 
 		public UserModel Usuario { get; set; }
 
-        public MainPageViewModel()
+        public MainPageViewModel(ICaixaService movimentosRepository)
 		{
 			ControleCaixaTappedCommand = new Command(async () =>
-				await Application.Current.MainPage.Navigation.PushAsync(new ControleCaixaView()));
+				await Application.Current.MainPage.Navigation.PushAsync(new ControleCaixaView(movimentosRepository)));
 
 			EstatisticasTappedCommand =	new Command(async () =>
 				await Application.Current.MainPage.Navigation.PushAsync(new EstatisticasView()));

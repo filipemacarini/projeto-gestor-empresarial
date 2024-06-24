@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestaoEmpresarial")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ab2340d923badcd99f1b18bfdbe4b18b160ad5d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+dc732d5b855b85200ba5d50181b2228c597f475f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestaoEmpresarial")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestaoEmpresarial")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
