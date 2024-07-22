@@ -14,7 +14,7 @@ namespace GestaoEmpresarial.Models
 		public Int32 Id { get; set; }
 
 		[NotNull]
-        public DateOnly Date { get; set; }
+        public DateTime Date { get; set; }
 
 		[NotNull]
 		public Decimal Value { get; set; }

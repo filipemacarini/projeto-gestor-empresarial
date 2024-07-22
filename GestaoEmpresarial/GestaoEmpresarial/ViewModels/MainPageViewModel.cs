@@ -1,4 +1,6 @@
-﻿using GestaoEmpresarial.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using GestaoEmpresarial.Models;
 using GestaoEmpresarial.Services;
 using GestaoEmpresarial.Views;
 using System;
@@ -10,26 +12,33 @@ using System.Windows.Input;
 
 namespace GestaoEmpresarial.ViewModels
 {
-	public class MainPageViewModel
+	public partial class MainPageViewModel : ObservableObject
 	{
-		public ICommand ControleCaixaTappedCommand { get; set; }
-		public ICommand EstatisticasTappedCommand { get; set; }
-		public ICommand AnotacoesTappedCommand { get; set; }
-
 		public UserModel Usuario { get; set; }
+		public ICaixaService MovimentosRepository { get; set; }
 
         public MainPageViewModel(ICaixaService movimentosRepository)
 		{
-			ControleCaixaTappedCommand = new Command(async () =>
-				await Application.Current.MainPage.Navigation.PushAsync(new ControleCaixaView(movimentosRepository)));
-
-			EstatisticasTappedCommand =	new Command(async () =>
-				await Application.Current.MainPage.Navigation.PushAsync(new EstatisticasView()));
-
-			AnotacoesTappedCommand = new Command(async () =>
-				await Application.Current.MainPage.Navigation.PushAsync(new AnotacoesView()));
-
+			MovimentosRepository = movimentosRepository;
 			Usuario = new UserModel("Filipe Emanuel Macarini Roco", "DEV FILIPE", "1234", "logo.png");
+		}
+
+		[RelayCommand]
+		public async void ControleCaixaTapped()
+		{
+			await Application.Current.MainPage.Navigation.PushAsync(new ControleCaixaView(MovimentosRepository));
+		}
+
+		[RelayCommand]
+		public async void EstatisticasTapped()
+		{
+			await Application.Current.MainPage.Navigation.PushAsync(new EstatisticasView());
+		}
+
+		[RelayCommand]
+		public async void AnotacoesTapped()
+		{
+			await Application.Current.MainPage.Navigation.PushAsync(new AnotacoesView());
 		}
 	}
 }

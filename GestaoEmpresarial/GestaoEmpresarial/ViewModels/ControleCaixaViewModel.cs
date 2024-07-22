@@ -32,7 +32,8 @@ namespace GestaoEmpresarial.ViewModels
 		[ObservableProperty]
 		private FormPaymentModel _formPayment;
 
-		public List<MovementModel> Movimentacoes { get; set; }
+		[ObservableProperty]
+		public ObservableCollection<MovementModel> _movimentacoes;
 
 		public ICaixaService movementRepository;
 
@@ -41,73 +42,43 @@ namespace GestaoEmpresarial.ViewModels
 		public ControleCaixaViewModel(ICaixaService _movementRepository)
         {
 			Date = DateTime.Today;
-            Movimentacoes = new List<MovementModel>
-			{
-				new MovementModel
-				{
-					Date = new DateOnly(2024, 6, 11),
-					Value = 101.34m,
-					FormPayment = FormPaymentModel.Crédito,
-					Description = null
-				},
-				new MovementModel
-				{
-					Date = new DateOnly(2024, 6, 11),
-					Value = 160.78m,
-					FormPayment = FormPaymentModel.Dinheiro,
-					Description = "Luz"
-				},
-				new MovementModel
-				{
-					Date = new DateOnly(2024, 6, 11),
-					Value = 120.34m,
-					FormPayment = FormPaymentModel.Pix,
-					Description = "Água"
-				},
-				new MovementModel
-				{
-					Date = new DateOnly(2024, 6, 11),
-					Value = 60.0m,
-					FormPayment = FormPaymentModel.Crédito,
-					Description = "Cotrole"
-				}
-			};
 			movementRepository = _movementRepository;
+			Movimentacoes = new() { };
+			Refresh(movementRepository);
 			FormasPagamento = new ObservableCollection<FormPaymentModel>((FormPaymentModel[])Enum.GetValues(typeof(FormPaymentModel)));
 		}
 
 		[RelayCommand]
 		public void SelectionChanged()
 		{
-			Date = SelectedMovimentacao.Date.ToDateTime(TimeOnly.MinValue);
+			if (SelectedMovimentacao == null) return;
+			Date = SelectedMovimentacao.Date;
 			Value = SelectedMovimentacao.Value;
 			Description = SelectedMovimentacao.Description;
 			FormPayment = SelectedMovimentacao.FormPayment;
 		}
 
 		[RelayCommand]
-		public async void Add()
+		public async Task Add()
 		{
-			try
+			await movementRepository.InitializeAsync();
+			await movementRepository.AddMovement(new MovementModel
 			{
-				await movementRepository.InitializeAsync();
-				await App.Current.MainPage.DisplayAlert("Alert", $"{SelectedMovimentacao.Date}, {SelectedMovimentacao.Value}, {SelectedMovimentacao.Description}, {SelectedMovimentacao.FormPayment}", "Ok");
-				SelectedMovimentacao.Date = DateOnly.FromDateTime(DateTime.Now);
-				await movementRepository.AddMovement(SelectedMovimentacao);
-				await Refresh(movementRepository);
-			}
-			catch (Exception ex)
-			{
-				await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "Ok");
-			}
+				Date = Date,
+				Value = Value,
+				Description = Description,
+				FormPayment = FormPayment
+			});
+			await Display();
 		}
 
 		[RelayCommand]
 		public async void Update()
 		{
+			if (SelectedMovimentacao == null) return;
 			await movementRepository.InitializeAsync();
 			await movementRepository.UpdateMovement(SelectedMovimentacao);
-			await Refresh(movementRepository);
+			await Display();
 		}
 
 		[RelayCommand]
@@ -115,24 +86,25 @@ namespace GestaoEmpresarial.ViewModels
 		{
 			await movementRepository.InitializeAsync();
 
-			var resp = await App.Current.MainPage.DisplayAlert("Deletar Item", $"Confirma a exclusão de R$ {SelectedMovimentacao.Value:.2m}?", "Sim", "Não");
+			var resp = await App.Current.MainPage.DisplayAlert("Deletar Item", $"Confirma a exclusão de:\nData: {SelectedMovimentacao.Date.ToShortDateString()}\nValor: R$ {SelectedMovimentacao.Value.ToString("F2")}\nDescrição: {SelectedMovimentacao.Description}\nForma de Pag.: {SelectedMovimentacao.FormPayment}", "Sim", "Não");
 
 			if (resp)
+			{
 				await movementRepository.DeleteMovement(SelectedMovimentacao);
-
-			await Refresh(movementRepository);
+				await Display();
+			}
 		}
 
-		[RelayCommand]
-		public async void Display()
+		public async Task Display()
 		{
-			await movementRepository.InitializeAsync();
+			Movimentacoes.Clear();
 			await Refresh(movementRepository);
 		}
 
 		private async Task Refresh(ICaixaService movement)
 		{
-			Movimentacoes.AddRange(await movement.GetMovements());
+			foreach (var item in await movement.GetMovements())
+				Movimentacoes.Add(item);
 		}
 	}
 }

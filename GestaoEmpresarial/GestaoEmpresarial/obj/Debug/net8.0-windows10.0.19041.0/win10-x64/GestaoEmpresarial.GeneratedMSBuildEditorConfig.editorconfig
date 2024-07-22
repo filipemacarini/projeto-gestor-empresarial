@@ -8,53 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GestaoEmpresarial
-build_property.ProjectDir = C:\Users\manau\OneDrive\Documentos\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\
+build_property.ProjectDir = E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/App.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/AppShell.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Resources/Styles/Colors.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Resources/Styles/Styles.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/AnotacoesView.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/AnotacoesView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Views.AnotacoesView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AnotacoesView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AnotacoesView.xaml
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/ControleCaixaView.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/ControleCaixaView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Views.ControleCaixaView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ControleCaixaView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ControleCaixaView.xaml
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/EstatisticasView.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/EstatisticasView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Views.EstatisticasView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\EstatisticasView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\EstatisticasView.xaml
 
-[C:/Users/manau/OneDrive/Documentos/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/MainPageView.xaml]
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Views/MainPageView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Views.MainPageView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MainPageView.xaml

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manau\\OneDrive\\Documentos\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj": {}
+    "E:\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manau\\OneDrive\\Documentos\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj": {
+    "E:\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manau\\OneDrive\\Documentos\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj",
+        "projectUniqueName": "E:\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj",
         "projectName": "GestaoEmpresarial",
-        "projectPath": "C:\\Users\\manau\\OneDrive\\Documentos\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj",
+        "projectPath": "E:\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\GestaoEmpresarial.csproj",
         "packagesPath": "C:\\Users\\manau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manau\\OneDrive\\Documentos\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\obj\\",
+        "outputPath": "E:\\Projetos\\Meus Repositórios Github\\projeto-gestor-empresarial\\GestaoEmpresarial\\GestaoEmpresarial\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
