@@ -29,7 +29,8 @@ namespace GestaoEmpresarial.Services
 
 		public async Task<List<MovementModel>> GetMovements()
 		{
-			return await _dbConnection.Table<MovementModel>().ToListAsync();
+			await SetUpDb();
+			return await _dbConnection.Table<MovementModel>().OrderByDescending(m => m.Date).ToListAsync();
 		}
 
 		public async Task InitializeAsync()

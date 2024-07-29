@@ -28,6 +28,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.AppShell
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Controls/DataViewerControl.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Controls.DataViewerControl.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\DataViewerControl.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\DataViewerControl.xaml
+
 [E:/Projetos/Meus Repositórios Github/projeto-gestor-empresarial/GestaoEmpresarial/GestaoEmpresarial/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestaoEmpresarial.Resources.Styles.Colors.xaml

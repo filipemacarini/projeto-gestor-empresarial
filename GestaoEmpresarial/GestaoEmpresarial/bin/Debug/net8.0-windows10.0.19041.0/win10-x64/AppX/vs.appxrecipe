@@ -29,13 +29,13 @@
     <AppXManifest Include="E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-12T02:01:08.581</Modified>
+      <Modified>2024-07-28T20:12:20.665</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-12T02:01:08.428</Modified>
+      <Modified>2024-07-28T20:12:20.513</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GestaoEmpresarial.runtimeconfig.json">
       <PackagePath>GestaoEmpresarial.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GestaoEmpresarial.dll">
       <PackagePath>GestaoEmpresarial.dll</PackagePath>
-      <Modified>2024-07-12T02:01:08.032</Modified>
+      <Modified>2024-07-28T20:12:20.127</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>GestaoEmpresarial.exe</PackagePath>
-      <Modified>2024-07-12T02:01:08.039</Modified>
+      <Modified>2024-07-28T20:12:20.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -315,7 +315,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projetos\Meus Repositórios Github\projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GestaoEmpresarial.deps.json">
       <PackagePath>GestaoEmpresarial.deps.json</PackagePath>
-      <Modified>2024-06-28T14:05:25.889</Modified>
+      <Modified>2024-07-28T19:46:59.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\manau\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

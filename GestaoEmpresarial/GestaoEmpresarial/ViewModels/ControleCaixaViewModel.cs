@@ -1,24 +1,20 @@
-﻿using GestaoEmpresarial.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using Microsoft.Maui.Controls;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using GestaoEmpresarial.Models;
 using GestaoEmpresarial.Services;
+using System.Collections.ObjectModel;
 
 namespace GestaoEmpresarial.ViewModels
 {
-    public partial class ControleCaixaViewModel : ObservableObject
+	public partial class ControleCaixaViewModel : ObservableObject
 	{
 		[ObservableProperty]
 		private MovementModel? _selectedMovimentacao;
+
+		[ObservableProperty]
+		private decimal _subtotal;
+
+		private Int32 Id { get; set; }
 
 		[ObservableProperty]
 		private DateTime _date;
@@ -52,6 +48,7 @@ namespace GestaoEmpresarial.ViewModels
 		public void SelectionChanged()
 		{
 			if (SelectedMovimentacao == null) return;
+			Id = SelectedMovimentacao.Id;
 			Date = SelectedMovimentacao.Date;
 			Value = SelectedMovimentacao.Value;
 			Description = SelectedMovimentacao.Description;
@@ -61,6 +58,7 @@ namespace GestaoEmpresarial.ViewModels
 		[RelayCommand]
 		public async Task Add()
 		{
+			if (Description == null) Description = "";
 			await movementRepository.InitializeAsync();
 			await movementRepository.AddMovement(new MovementModel
 			{
@@ -69,21 +67,29 @@ namespace GestaoEmpresarial.ViewModels
 				Description = Description,
 				FormPayment = FormPayment
 			});
-			await Display();
+			Display();
 		}
 
 		[RelayCommand]
-		public async void Update()
+		public async Task Update()
 		{
 			if (SelectedMovimentacao == null) return;
 			await movementRepository.InitializeAsync();
-			await movementRepository.UpdateMovement(SelectedMovimentacao);
-			await Display();
+			await movementRepository.UpdateMovement(new MovementModel()
+			{
+				Id = SelectedMovimentacao.Id,
+				Date = Date,
+				Value = Value,
+				Description = Description,
+				FormPayment = FormPayment,
+			});
+			Display();
 		}
 
 		[RelayCommand]
-		public async void Delete()
+		public async Task Delete()
 		{
+			if (SelectedMovimentacao == null) return;
 			await movementRepository.InitializeAsync();
 
 			var resp = await App.Current.MainPage.DisplayAlert("Deletar Item", $"Confirma a exclusão de:\nData: {SelectedMovimentacao.Date.ToShortDateString()}\nValor: R$ {SelectedMovimentacao.Value.ToString("F2")}\nDescrição: {SelectedMovimentacao.Description}\nForma de Pag.: {SelectedMovimentacao.FormPayment}", "Sim", "Não");
@@ -91,20 +97,21 @@ namespace GestaoEmpresarial.ViewModels
 			if (resp)
 			{
 				await movementRepository.DeleteMovement(SelectedMovimentacao);
-				await Display();
+				Display();
 			}
 		}
 
-		public async Task Display()
+		public void Display()
 		{
 			Movimentacoes.Clear();
-			await Refresh(movementRepository);
+			Refresh(movementRepository);
 		}
 
-		private async Task Refresh(ICaixaService movement)
+		private async void Refresh(ICaixaService movement)
 		{
 			foreach (var item in await movement.GetMovements())
 				Movimentacoes.Add(item);
+			Subtotal = Movimentacoes.Sum(v => v.Value);
 		}
 	}
 }

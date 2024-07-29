@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestaoEmpresarial.Controls.DataViewerControl">
+    <Border
+        Grid.Column="0"
+        StrokeThickness="0"
+        StrokeShape="RoundRectangle 24, 24, 24, 24"
+        BackgroundColor="{StaticResource Gray800}"
+        Padding="12">
+        <Grid
+            RowDefinitions="Auto, *">
+            <Label
+                x:Name="LbInformation"
+                FontSize="28"
+                FontFamily="SpaceS"
+                TextColor="{StaticResource Gray200}"
+                HorizontalOptions="Center"
+                Margin="0, 15, 0, 0"/>
+            <RoundRectangle
+                x:Name="RrStatus"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                StrokeThickness="0"
+                CornerRadius="12"
+                HeightRequest="24"
+                WidthRequest="24"/>
+            <Label
+                x:Name="LbValue"
+                Grid.Row="1"
+                FontSize="40"
+                FontFamily="SpaceS"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Grid>
+    </Border>
+</ContentView>

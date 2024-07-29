@@ -19,26 +19,26 @@
                 FontFamily="SpaceB"
                 Format="dd/MM/yyyy"
                 HorizontalOptions="FillAndExpand"
-                Date="{Binding Date}"/>
+                Date="{Binding Date, Mode=TwoWay}"/>
             <Entry 
                 Grid.Column="1"
                 Placeholder="Valor"
                 FontFamily="SpaceB"
                 HorizontalTextAlignment="Start"
                 Keyboard="Numeric"
-                Text="{Binding Value}"/>
+                Text="{Binding Value, Mode=TwoWay}"/>
             <Entry 
                 Grid.Column="2"
                 Placeholder="Descrição"
                 FontFamily="SpaceB"
                 HorizontalTextAlignment="Start"
-                Text="{Binding Description}"/>
+                Text="{Binding Description, Mode=TwoWay}"/>
             <Picker 
                 Grid.Column="3"
                 ItemsSource="{Binding FormasPagamento}"
                 FontFamily="SpaceB"
                 HorizontalTextAlignment="Center"
-                SelectedItem="{Binding FormPayment}"/>
+                SelectedItem="{Binding FormPayment, Mode=TwoWay}"/>
             <Button
                 Grid.Column="4"
                 Text="Adicionar"
@@ -71,76 +71,90 @@
             Grid.Row="1"
             Padding="16"
             StrokeShape="RoundRectangle 30, 30, 30, 30"
-            Stroke="{StaticResource Gray100}"
+            StrokeThickness="0"
             BackgroundColor="{StaticResource Gray800}">
-            <CollectionView
-                ItemsSource="{Binding Movimentacoes}"
-                SelectionMode="Single"
-                SelectionChangedCommand="{Binding SelectionChangedCommand}"
-                SelectedItem="{Binding SelectedMovimentacao, Mode=TwoWay}">
-                <CollectionView.Header>
-                        <Grid
-                            ColumnDefinitions=".2*, .2*, .3*, .3*, 16"
-                            Margin="0, 0, 0, 8">
-                            <Label
-                                Grid.Column="0"
-                                Text="Data"
-                                FontFamily="SpaceB"
-                                HorizontalTextAlignment="Center"
-                                Padding="5, 0, 5, 0"/>
-                            <Label 
-                                Grid.Column="1"
-                                Text="Valor"
-                                FontFamily="SpaceB"
-                                HorizontalTextAlignment="Center"
-                                Padding="5, 0, 5, 0"/>
-                            <Label 
-                                Grid.Column="2"
-                                Text="Descrição"
-                                FontFamily="SpaceB"
-                                HorizontalTextAlignment="Center"
-                                Padding="5, 0, 5, 0"/>
-                            <Label 
-                                Grid.Column="3"
-                                Text="Forma de Pagamento"
-                                FontFamily="SpaceB"
-                                HorizontalTextAlignment="Center"
-                                Padding="5, 0, 5, 0"/>
-                        </Grid>
-                </CollectionView.Header>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid
-                            ColumnDefinitions=".2*, .2*, .3*, .3*"
-                            Margin="8">
-                            <Label
-                                Grid.Column="0"
-                                Text="{Binding Date}"
-                                FontFamily="SpaceR"
-                                HorizontalTextAlignment="Start"
-                                Padding="5, 0, 5, 0"/>
-                            <Label 
-                                Grid.Column="1"
-                                Text="{Binding Value, StringFormat='R$ {0:F2}'}"
-                                FontFamily="SpaceR"
-                                HorizontalTextAlignment="Start"
-                                Padding="5, 0, 5, 0"/>
-                            <Label 
-                                Grid.Column="2"
-                                Text="{Binding Description}"
-                                FontFamily="SpaceR"
-                                HorizontalTextAlignment="Start"
-                                Padding="5, 0, 5, 0"/>
-                            <Label 
-                                Grid.Column="3"
-                                Text="{Binding FormPayment}"
-                                FontFamily="SpaceR"
-                                HorizontalTextAlignment="Start"
-                                Padding="5, 0, 5, 0"/>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <Grid
+                RowDefinitions="Auto, *, Auto">
+                <Grid
+                    Grid.Row="0"
+                    ColumnDefinitions=".2*, .2*, .3*, .3*"
+                    Margin="0, 0, 0, 8">
+                    <Label
+                        Grid.Column="0"
+                        Text="Data"
+                        FontFamily="SpaceB"
+                        HorizontalTextAlignment="Center"
+                        Padding="5, 0, 5, 0"/>
+                    <Label 
+                        Grid.Column="1"
+                        Text="Valor"
+                        FontFamily="SpaceB"
+                        HorizontalTextAlignment="Center"
+                        Padding="5, 0, 5, 0"/>
+                    <Label 
+                        Grid.Column="2"
+                        Text="Descrição"
+                        FontFamily="SpaceB"
+                        HorizontalTextAlignment="Center"
+                        Padding="5, 0, 5, 0"/>
+                    <Label 
+                        Grid.Column="3"
+                        Text="Forma de Pagamento"
+                        FontFamily="SpaceB"
+                        HorizontalTextAlignment="Center"
+                        Padding="5, 0, 5, 0"/>
+                </Grid>
+                <CollectionView
+                    Grid.Row="1"
+                    ItemsSource="{Binding Movimentacoes}"
+                    SelectionMode="Single"
+                    SelectionChangedCommand="{Binding SelectionChangedCommand}"
+                    SelectedItem="{Binding SelectedMovimentacao, Mode=TwoWay}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid
+                                ColumnDefinitions=".2*, .2*, .3*, .3*"
+                                Margin="8">
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding Date}"
+                                    FontFamily="SpaceR"
+                                    HorizontalTextAlignment="Start"
+                                    Padding="5, 0, 5, 0"/>
+                                <Label 
+                                    Grid.Column="1"
+                                    Text="{Binding Value, StringFormat='R$ {0:F2}'}"
+                                    FontFamily="SpaceR"
+                                    HorizontalTextAlignment="Start"
+                                    Padding="5, 0, 5, 0"/>
+                                <Label 
+                                    Grid.Column="2"
+                                    Text="{Binding Description}"
+                                    FontFamily="SpaceR"
+                                    HorizontalTextAlignment="Start"
+                                    Padding="5, 0, 5, 0"/>
+                                <Label 
+                                    Grid.Column="3"
+                                    Text="{Binding FormPayment}"
+                                    FontFamily="SpaceR"
+                                    HorizontalTextAlignment="Start"
+                                    Padding="5, 0, 5, 0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <Grid
+                    Grid.Row="2"
+                    ColumnDefinitions=".2*, .2*, .6*"
+                    Margin="8, 8, 8, 0">
+                    <Label 
+                        Grid.Column="1"
+                        Text="{Binding Subtotal, StringFormat='R$ {0:F2}'}"
+                        FontFamily="SpaceB"
+                        HorizontalTextAlignment="Start"
+                        Padding="5, 0, 5, 0"/>
+                </Grid>
+            </Grid>
         </Border>
     </Grid>
 </ContentPage>
