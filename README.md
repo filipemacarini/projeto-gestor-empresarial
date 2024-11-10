@@ -1,5 +1,5 @@
 # Projeto de Aplicativo para Gestão Empresarial
-Esse projeto tem como objetivo auxiliar na gestão financeira de uma empresa. Foi projetado para meu pai Ademar de Roco usar, e tem como base 3 funcionalidades essenciais: Gerenciador de Entradas, Painel de Estatíscas, Bloco de Notas Inteligente
+Este projeto tem como objetivo auxiliar na gestão financeira de uma empresa. Foi desenvolvido para meu pai, Ademar de Roco, e possui três funcionalidades essenciais: Gerenciador de Entradas, Painel de Estatísticas e Bloco de Notas Inteligente.
 
 ## Funcionalidades:
 - Adicionar, Remover e Modificar entradas
