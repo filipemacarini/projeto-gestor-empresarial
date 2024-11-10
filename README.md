@@ -22,7 +22,7 @@ O projeto está aproximadamente 60% concluído. A funcionalidade do Gerenciador 
     ```
 2. Navegue até o diretório do projeto:
     ```bash
-    cd /GestaoEmpresarial/GestaoEmpresarial
+    cd projeto-gestor-empresarial\GestaoEmpresarial\GestaoEmpresarial
     ```
 3. Compile e execute o projeto:
     ```bash
